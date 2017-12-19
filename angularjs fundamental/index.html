@@ -1,0 +1,17 @@
+<html ng-app="myapp">
+    <head>
+        <title>
+            Angularjs
+        </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.14/angular.min.js"></script>
+    </head>
+    <body ng-controller="HelloController">
+        {{msg}}
+        <script>
+            var app = angular.module('myapp', []);
+            app.controller('HelloController', function($scope) {
+                $scope.msg = 'Hello Angular';
+            });
+        </script>
+    </body>
+</html>
