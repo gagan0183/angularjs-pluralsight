@@ -1,4 +1,5 @@
 eventsApp.controller('EventController', function($scope) {
+    $scope.sortOrder = 'name';
     $scope.event = {
         "name": "Angular Boot Camp",
         "id": 1,
