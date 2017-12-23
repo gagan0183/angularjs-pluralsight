@@ -76,5 +76,5 @@ select, textarea {
     background-color: #272b30;
 }
 input.ng-invalid.ng-dirty {
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(110, 122, 54);
 }
