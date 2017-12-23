@@ -1,8 +1,12 @@
-eventsApp.controller('EventController', function($scope, eventData) {
+eventsApp.controller('EventController', function($scope, eventData, $log) {
     $scope.sortOrder = 'name';
-    eventData.getEvent(function(data) {
-        $scope.event = data;
-    });
+    eventData.getEvent()
+            .success(function(event) {
+                $scope.event = event;
+            })
+            .error(function(data, status, headers, config) {
+                $log.warn(data, status, headers(), config);
+            });
     $scope.upVoteSession = function(session) {
         session.upVoteCount++;
     }
